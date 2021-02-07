@@ -6,20 +6,13 @@
     (see tests to confirm how this data will be structured)
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
-// const attendedMin8Classes = (student) => {
-//   if (student[1] >= 8) {
-//     console.log(student[0]);
-//     return student[0];
-//   }
-// };
+
 const eligibleStudents = (array) => {
-  // console.log(array.filter(attendedMin8Classes));
-  return array.filter((student) => {
-    if (student[1] >= 8) {
-      console.log(student[0]);
-      return student[0];
-    }
-  });
+  return array
+    .filter((student) => {
+      return student[1] >= 8;
+    })
+    .map((student) => student[0]);
 };
 
 /* ======= TESTS - DO NOT MODIFY ===== */

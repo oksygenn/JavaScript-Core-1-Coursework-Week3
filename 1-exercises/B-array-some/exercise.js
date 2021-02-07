@@ -14,6 +14,13 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+// checks if any element in the array is null
+var hasNull = pairsByIndex.some((el) => el === null);
+
+// exits the program completely if `hasNull` is equal to true
+if (hasNull) {
+  process.exit(1);
+}
 
 var pairs = pairsByIndex.map(function (indexes) {
   var student = students[indexes[0]];

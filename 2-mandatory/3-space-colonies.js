@@ -15,7 +15,13 @@
   
 */
 
-function colonisers() {}
+const familyStartsWithA = (string) => {
+  return string.includes("family") && string.charAt(0) === "A";
+};
+
+const colonisers = (array) => {
+  return array.filter(familyStartsWithA);
+};
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -33,6 +39,8 @@ const voyagers = [
   "Avery family",
   "Archer family",
 ];
+
+console.log(colonisers(voyagers));
 
 const util = require("util");
 

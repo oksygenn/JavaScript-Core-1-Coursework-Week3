@@ -10,8 +10,14 @@
 
     Some string methods that might help you here are .replace() and .substring(). 
 */
+const isSafe = (levelOfOxygen) => {
+  const number = Number(levelOfOxygen.replace("%", "")); // converts string to a number and removes "%"
+  return number > 19.5 && number < 23.5;
+};
 
-function safeLevels() {}
+const safeLevels = (planetArr) => {
+  return planetArr.find(isSafe);
+};
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
